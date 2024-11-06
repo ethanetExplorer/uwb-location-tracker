@@ -1,0 +1,14 @@
+#location-diagram {
+  background-color: #eaebed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+}

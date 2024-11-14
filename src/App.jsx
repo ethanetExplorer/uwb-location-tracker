@@ -120,21 +120,21 @@ const App = () => {
   };
 
   const switchZone = () => {
-    // if (checkPosition(["1786", "983f"], person.currentPos)) {
-    //   const updatedPerson = {
-    //     ...person, // Keep old values
-    //     currentPos: ["983f", "88cc"],
-    //     lastUpdated: `Manually updated`,
-    //   };
-    //   setPerson(updatedPerson); // Update the person state
-    // } else if (checkPosition(["88cc", "983f"], person.currentPos)) {
-    //   const updatedPerson = {
-    //     ...person, // Keep old values
-    //     currentPos: ["983f", "1786"],
-    //     lastUpdated: `Manually updated`,
-    //   };
-    //   setPerson(updatedPerson); // Update the person state
-    // }
+    if (checkPosition(["1786", "983f"], person.currentPos)) {
+      const updatedPerson = {
+        ...person, // Keep old values
+        currentPos: ["983f", "88cc"],
+        lastUpdated: `Manually updated`,
+      };
+      setPerson(updatedPerson); // Update the person state
+    } else if (checkPosition(["88cc", "983f"], person.currentPos)) {
+      const updatedPerson = {
+        ...person, // Keep old values
+        currentPos: ["983f", "1786"],
+        lastUpdated: `Manually updated`,
+      };
+      setPerson(updatedPerson); // Update the person state
+    }
     console.log("Nice try");
   };
 

@@ -1,0 +1,209 @@
+/* Center the table within a container */
+.table-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the table */
+  max-height: 70vh; /* Make sure the table has enough space to center vertically */
+  margin-top: 20px; /* Add some space on top of the table */
+  padding: 0 20px; /* Add horizontal padding */
+}
+
+/* General Styles for the Location Tracker Page */
+.header {
+  display: flex;
+  justify-content: space-between; /* Align title and button side by side */
+  align-items: center; /* Center vertically */
+  background-color: #0055b8; /* Set background color */
+  padding: 20px 40px; /* Add padding to create a taller header */
+  border-radius: 6px;
+  margin-bottom: 40px; /* More vertical margin below header */
+  color: white; /* Make text white */
+}
+
+.location-tracker-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white; /* White text color for better contrast */
+}
+
+.register-worker-btn {
+  padding: 12px 20px;
+  background-color: #4caf9f; /* Warm color for button */
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-worker-btn:hover {
+  font-weight: 600;
+  background-color: #308d7d; /* Darker shade on hover */
+  transform: translateY(-1px); /* Lift the button slightly */
+}
+
+.register-worker-btn:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.divider {
+  width: 100%;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* General Styles for the Location Tracker Page */
+.location-diagram {
+  display: flex;
+  justify-content: center; /* Align zones horizontally in the center */
+  padding: 0px 10px 20px 10px;
+  border: 1px solid #999;
+}
+
+/* Zone styles */
+.zone-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 12px 0px 12px;
+}
+
+.zone-body-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 12px 0px 0px 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.zone-body-caption {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0px 0px 8px 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+/* Circle Style */
+.worker-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* To center the circle */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.worker-circle-glow-red {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* To center the circle */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8); /* Base glow */
+  animation: pulse-glow 1.2s infinite; /* Apply pulsing animation */
+}
+/* Animation for pulsating glow effect */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.4); /* Light glow */
+  }
+  50% {
+    box-shadow: 0 0 25px 10px rgba(255, 0, 0, 1); /* Stronger, more intense glow */
+  }
+  100% {
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.4); /* Light glow */
+  }
+}
+
+.worker-id {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Table Styles */
+.person-table {
+  width: 80%;
+  border-collapse: collapse; /* Ensures borders between cells are merged */
+  border: 2px solid #333; /* Border around the whole table */
+  margin: 20px 0; /* Space between the table and surrounding content */
+}
+
+.table-header {
+  background-color: #f4f4f4;
+  padding: 12px;
+  text-align: left;
+  font-size: 1.1rem; /* Slightly larger text for headers */
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #555; /* Add border around the entire header row */
+}
+
+/* Add borders to individual header cells */
+.table-header th {
+  padding: 12px;
+  border-right: 1px solid #333; /* Right border for each header cell */
+}
+
+.table-header th:last-child {
+  border-right: none; /* Remove the right border from the last header cell */
+}
+
+.table-row {
+  transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.table-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-row:nth-child(odd) {
+  background-color: #fff;
+}
+
+.table-row:hover {
+  background-color: #e0e0e0; /* Darken the background when hovering */
+}
+
+.table-cell {
+  padding: 12px;
+  border: 1px solid #555; /* Make borders more prominent */
+  text-align: left;
+  font-size: 1rem;
+  color: #555;
+}
+
+.table-cell:not(:last-child) {
+  border-right: 1px solid #555; /* Thicker right border for each cell */
+}
+
+.table-cell strong {
+  color: #333; /* Darker color for strong text */
+}
+
+/* Styling for 'Not updated yet' and empty values */
+.table-cell span.empty {
+  color: #999;
+  font-style: italic;
+}
+
+/* Zone Styling */
+.zone {
+  border: 1px solid #333;
+  border-radius: 3px;
+  min-width: 500px;
+  min-height: 100px;
+  position: relative; /* Necessary for absolute positioning of the worker circle */
+}

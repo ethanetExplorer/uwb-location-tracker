@@ -1,0 +1,158 @@
+/* The overlay will cover the full viewport height and width */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1000; /* Ensure the overlay appears above other content */
+}
+
+/* Slideover background dimming */
+.slideover-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Slideover form container */
+.slideover {
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%); /* Initially offscreen */
+  animation: slideIn 0.3s ease-out forwards;
+  height: 80%; /* Take up 80% of the screen height */
+  max-height: 100vh; /* Prevent the form from growing too tall */
+  min-height: 400px; /* Minimum height to keep form reasonable */
+  overflow-y: auto; /* Allow scrolling if content exceeds max height */
+  border-radius: 12px 0px 0px 12px; /* Rounded corners */
+}
+
+/* Animation for sliding in */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Form fields styling */
+.form-container input,
+.form-container select,
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button styling */
+.form-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+/* Cancel button styling */
+.form-container button[type="button"] {
+  background-color: #f44336;
+}
+
+.form-container button[type="button"]:hover {
+  background-color: #e53935;
+}
+
+/* Title and form field spacing */
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Form groups (stacked) */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group select[multiple] {
+  height: 100px;
+}
+
+/* Form buttons container */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.reset-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* On hover, buttons become slightly darker */
+.add-btn:hover {
+  background-color: #45a049;
+}
+
+.reset-btn:hover {
+  background-color: #e68928;
+}
+
+.cancel-btn:hover {
+  background-color: #e53935;
+}
